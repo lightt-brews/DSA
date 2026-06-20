@@ -1,5 +1,3 @@
-package DSA.SlidingWindow;
-
 import java.util.HashSet;
 
 public class LengthOfLongestSubstring_0003 {
