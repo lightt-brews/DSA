@@ -18,8 +18,8 @@ class VersionControl {
     }
 }
 
-public class FirstBadVersion_0278 extends VersionControl{
-    public FirstBadVersion_0278(int firstBad) {
+class Problem0278_FirstBadVersion extends VersionControl {
+    public Problem0278_FirstBadVersion(int firstBad) {
         super(firstBad);
     }
 
@@ -39,7 +39,7 @@ public class FirstBadVersion_0278 extends VersionControl{
     }
 
     public static void main(String[] args){
-        FirstBadVersion_0278 s = new FirstBadVersion_0278(1702766719); 
+        Problem0278_FirstBadVersion s = new Problem0278_FirstBadVersion(1702766719); 
         System.out.println(s.firstBadVersion(2126753390)); 
     }
 }

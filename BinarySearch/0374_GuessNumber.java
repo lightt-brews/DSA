@@ -15,7 +15,7 @@ class GuessGame {
     }
 }
 
-class GuessNumber_0374 extends GuessGame {
+class Problem0374_GuessNumber extends GuessGame {
     public int guessNumber(int n) {
         int left = 1;
         int right = n;
@@ -35,7 +35,7 @@ class GuessNumber_0374 extends GuessGame {
         return left;
     }
     public static void main(String[] args) {
-        GuessNumber_0374 obj = new GuessNumber_0374();
+        Problem0374_GuessNumber obj = new Problem0374_GuessNumber();
 
         int n = 10;
         int ans = obj.guessNumber(n);

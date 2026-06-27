@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class CapacityToShipPackagesWithinDdays_1011 {
+class Problem1011_CapacityToShipPackagesWithinDdays {
     public static int ship(int[] weights, int days){
         int sum = 0;
         int max = 0;

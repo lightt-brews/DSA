@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class Sqrtx_0069 {
+class Problem0069_Sqrtx {
     public static int sqrt(int n){
         int left= 1;
         int right = n/2+1;

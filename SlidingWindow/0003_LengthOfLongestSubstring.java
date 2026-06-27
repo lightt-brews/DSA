@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class LengthOfLongestSubstring_0003 {
+class Problem0003_LengthOfLongestSubstring {
     public static int lengthoflongestsubstring(String s){
         HashSet<Character> set = new HashSet<>();
         int left = 0;
