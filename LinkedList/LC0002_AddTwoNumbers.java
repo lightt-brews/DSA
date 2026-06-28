@@ -7,7 +7,7 @@ class ListNode {
     }
 }
 
-class Problem0002_AddTwoNumbers {
+class LC0002_AddTwoNumbers {
 
     public static ListNode arrayToLinkedList(int[] arr) {
         if (arr.length == 0) return null;
@@ -103,7 +103,7 @@ class Problem0002_AddTwoNumbers {
         }
         System.out.println();
 
-        Problem0002_AddTwoNumbers obj = new Problem0002_AddTwoNumbers();
+        LC0002_AddTwoNumbers obj = new LC0002_AddTwoNumbers();
 
         ListNode result = obj.addTwoNumbers(l1, l2);
         while (result!=null){

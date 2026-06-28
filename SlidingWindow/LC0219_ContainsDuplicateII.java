@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Problem0219_ContainsDuplicateII {
+class LC0219_ContainsDuplicateII {
     public static boolean containsNearbyDuplicate(int[] nums, int k){
         HashSet<Integer> set = new HashSet<>();
         int i = 0;

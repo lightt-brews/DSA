@@ -7,7 +7,7 @@ class ListNode {
     }
 }
 
-public class Problem0206_ReverseLinkedList {
+public class LC0206_ReverseLinkedList {
     public static ListNode arrayToLinkedList(int[] arr) {
         if (arr.length == 0) return null;
 
@@ -41,7 +41,7 @@ public class Problem0206_ReverseLinkedList {
 
         ListNode l1 = arrayToLinkedList(nums);
 
-        Problem0206_ReverseLinkedList obj = new Problem0206_ReverseLinkedList();
+        LC0206_ReverseLinkedList obj = new LC0206_ReverseLinkedList();
 
         ListNode result = obj.reverseList(l1);
         while (result!=null){

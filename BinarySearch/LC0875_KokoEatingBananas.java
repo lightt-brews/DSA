@@ -1,6 +1,6 @@
 package BinarySearch;
 
-class Problem0875_KokoEatingBananas {
+class LC0875_KokoEatingBananas {
     public static int koko(int[] piles, int h){
         int max = 1;
         for(int i =0; i< piles.length;i++){

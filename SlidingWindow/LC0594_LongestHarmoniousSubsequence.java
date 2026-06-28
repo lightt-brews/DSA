@@ -1,6 +1,6 @@
 import java.util.Hashtable;
 
-class Problem0594_LongestHarmoniousSubsequence {
+class LC0594_LongestHarmoniousSubsequence {
     public static int findLHS(int[] nums) {
         Hashtable<Integer,Integer> table = new Hashtable<>();
         int t = 0;
