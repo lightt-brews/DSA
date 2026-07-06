@@ -1,6 +1,6 @@
-#Stack
+# Stack
 
-##Patterns of Problems Solved
+## Patterns of Problems Solved
 
     ### 155. Min Stack
 
