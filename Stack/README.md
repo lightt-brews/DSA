@@ -34,3 +34,15 @@
 -calculate the time for each car. (target-pos/speed = time)
 -push the time in stack if the new car is slower than the prv car.
 -now return the stack size which is out size of fleet.
+
+### 735. Asteroid Collection
+
+-uses one stack.
+-indetify the three conditions i.e.:
+    i) both asteroids moving towards each other and both are equal.
+    ii) both asteroids are moving towards each other but are not equal. 
+    iii) both asteroids are moving away from each other.
+- make a boolean alive variable to keep the track of which asteroid is not destroyed.
+- if cond i then pop the stack and change alive to false.
+- if cond ii then push the one with greater abs value.
+- if cond iii then just push if it is alive. 
