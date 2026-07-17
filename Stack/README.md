@@ -29,16 +29,16 @@
 
 ### 853. Car Fleet
 
--can be done without stack too.
--make a 2d array which is sorted based on car closest to target.
--calculate the time for each car. (target-pos/speed = time)
--push the time in stack if the new car is slower than the prv car.
--now return the stack size which is out size of fleet.
+- can be done without stack too.
+- make a 2d array which is sorted based on car closest to target.
+- calculate the time for each car. (target-pos/speed = time)
+- push the time in stack if the new car is slower than the prv car.
+- now return the stack size which is out size of fleet.
 
 ### 735. Asteroid Collection
 
--uses one stack.
--indetify the three conditions i.e.:
+- uses one stack.
+- indetify the three conditions i.e.:
     i) both asteroids moving towards each other and both are equal.
     ii) both asteroids are moving towards each other but are not equal. 
     iii) both asteroids are moving away from each other.
