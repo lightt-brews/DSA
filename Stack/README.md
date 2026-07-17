@@ -26,3 +26,11 @@
 - when we see an operand, store the top two values of stack {`b=stack.pop() and a=stack.pop()`} .
 - then do the operation accordingly. (a*b, a-b, a/b, a+b).
 - at last return stack.pop().
+
+### 853. Car Fleet
+
+-can be done without stack too.
+-make a 2d array which is sorted based on car closest to target.
+-calculate the time for each car. (target-pos/speed = time)
+-push the time in stack if the new car is slower than the prv car.
+-now return the stack size which is out size of fleet.
