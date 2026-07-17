@@ -35,14 +35,15 @@
 - push the time in stack if the new car is slower than the prv car.
 - now return the stack size which is out size of fleet.
 
-### 735. Asteroid Collection
+### 735. Asteroid Collision
 
-- uses one stack.
-- indetify the three conditions i.e.:
-    i) both asteroids moving towards each other and both are equal.
-    ii) both asteroids are moving towards each other but are not equal. 
-    iii) both asteroids are moving away from each other.
-- make a boolean alive variable to keep the track of which asteroid is not destroyed.
-- if cond i then pop the stack and change alive to false.
-- if cond ii then push the one with greater abs value.
-- if cond iii then just push if it is alive. 
+- Uses one stack.
+- Collision occurs only when:
+  - `stack.peek() > 0`
+  - `current < 0`
+- Three cases:
+  1. Equal size → pop stack, current also dies.
+  2. Current is larger → pop stack and continue checking.
+  3. Stack top is larger → current dies.
+- Use a boolean `alive` to track whether the current asteroid survives.
+- Push the current asteroid only if it survives all collisions.
