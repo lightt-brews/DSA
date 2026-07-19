@@ -47,3 +47,19 @@
   3. Stack top is larger → current dies.
 - Use a boolean `alive` to track whether the current asteroid survives.
 - Push the current asteroid only if it survives all collisions.
+
+### 1081. Smallest Subsequence of Distinct Characters
+
+- Uses one monotonic stack.
+- Use:
+  - `HashSet` → check if char is already in stack.
+  - `freq[]` → check if char appears again.
+- Pop occurs only when:
+  - `stack.peek() > current`
+  - `freq[stack.peek()] > 0`
+- Three cases:
+  1. Character already in stack → skip.
+  2. Top is bigger and appears again → pop top.
+  3. Otherwise → push current.
+- Remove bigger chars only if they can be added later.
+- Push current char after all possible pops.
