@@ -50,7 +50,7 @@
 
 ### 1081. Smallest Subsequence of Distinct Characters
 
-- Uses one monotonic stack.
+- Uses one monotonic stack. (Increasing monotonic stack)
 - Use:
   - `HashSet` → check if char is already in stack.
   - `freq[]` → check if char appears again.
