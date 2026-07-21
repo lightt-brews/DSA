@@ -63,15 +63,15 @@
 
 - Uses one monotonic stack. (Increasing monotonic stack)
 - Use:
-  - `HashSet` → check if char is already in stack.
-  - `freq[]` → check if char appears again.
+  - `HashSet` -> check if char is already in stack.
+  - `freq[]` -> check if char appears again.
 - Pop occurs only when:
   - `stack.peek() > current`
   - `freq[stack.peek()] > 0`
 - Three cases:
-  1. Character already in stack → skip.
-  2. Top is bigger and appears again → pop top.
-  3. Otherwise → push current.
+  1. Character already in stack ->skip.
+  2. Top is bigger and appears again -> pop top.
+  3. Otherwise -> push current.
 - Remove bigger chars only if they can be added later.
 - Push current char after all possible pops.
 
@@ -86,5 +86,21 @@
 - Find middle using slow/fast pointer.
 - Stack gives reverse order of second half.
 - Merge:
-  - first half node → stack node → repeat.
+  - first half node -> stack node -> repeat.
 - Rearrange nodes by changing `next` pointers.
+
+
+
+### 901. Online Stock Span
+
+- Uses one stack.
+- Store an array in stack:
+  - index 0 -> price
+  - index 1 -> span
+- In `next()`, use a decreasing monotonic stack.
+- Initialize `span = 1` because today's price always counts itself.
+- While stack is not empty and the top price is <= current price:
+  - Pop the top element.
+  - Add its stored span to the current span because those days are also included.
+- Push the current price and calculated span into the stack.
+- Return span.
