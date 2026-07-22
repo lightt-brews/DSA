@@ -104,3 +104,19 @@
   - Add its stored span to the current span because those days are also included.
 - Push the current price and calculated span into the stack.
 - Return span.
+
+
+
+### 1944. Number of Visible People in a Queue
+
+- Uses one decreasing monotonic stack (stores heights).
+- Create an `ans` array.
+- Traverse from right to left.
+- For each person:
+  - While stack is not empty and `stack.peek() < current height`:
+    - Pop the shorter person (current person can see them).
+    - Increment `ans[i]`.
+  - If stack is still not empty:
+    - Increment `ans[i]` because the first taller person is also visible.
+  - Push the current height onto the stack.
+- Return `ans`.
