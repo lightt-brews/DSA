@@ -56,3 +56,25 @@
   - `left.right` with `right.left`
 - Return:
   isMirror(left.left, right.right) && isMirror(left.right, right.left)
+
+
+
+### 572. Subtree of Another Tree
+
+- uses 2 recursive functions:
+  - `isSubtree()` → searches.
+  - `isSameTree()` → verifies.
+
+#### `isSubtree()`
+
+- if `root == null` return `false`.
+- check current node using `isSameTree(root, subRoot)`.
+- if not found, search left and right.
+- return `true` if any check is `true`.
+
+#### `isSameTree()`
+
+- handle `null` cases.
+- if values differ, return `false`.
+- recursively compare left and right.
+- both must be `true`.
