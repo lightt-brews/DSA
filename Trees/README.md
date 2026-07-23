@@ -37,3 +37,22 @@
     - Left subtree with left subtree. 
     - Right subtree with right subtree. 
 - Return: isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+
+
+
+### 101. Symmetric Tree
+
+- Pattern: DFS (Preorder)
+- Use two recursive methods:
+  - `isSymmetric(root)` → starts the recursion.
+  - `isMirror(left, right)` → checks if two subtrees are mirror images.
+- Base case:
+  - Both nodes are `null` → return `true`.
+  - One node is `null` and the other isn't → return `false`.
+- Compare the values of the current nodes.
+  - If `left.val != right.val` → return `false`.
+- Recursively compare:
+  - `left.left` with `right.right`
+  - `left.right` with `right.left`
+- Return:
+  isMirror(left.left, right.right) && isMirror(left.right, right.left)
