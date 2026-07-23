@@ -3,12 +3,8 @@ package Trees;
 public class LC572_SubtreeOfAnotherTree {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if(root == null){
-            if(subRoot == null){
-                return true;
-            }
-            else{
-                return false;
-            }
+            return false;
+            
         }
         
         return (isSameTree(root,subRoot) || isSubtree(root.left,subRoot) || isSubtree(root.right,subRoot));
