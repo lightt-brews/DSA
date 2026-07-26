@@ -78,3 +78,30 @@
 - if values differ, return `false`.
 - recursively compare left and right.
 - both must be `true`.
+
+
+
+### 543. Diameter of Binary Tree
+
+- Pattern: DFS (Postorder)
+- Use 2 methods:
+  - diameterOfBinaryTree(root) -> initializes recursion and returns answer.
+  - height(root) -> returns height while updating the diameter.
+
+#### `height()`
+
+- Base case:
+  - if `root == null` -> return `0`.
+- Recursively find:
+  - left height.
+  - right height.
+- Update diameter:
+  - `diameter = Math.max(diameter, left + right)`.
+- Return height:
+  - `1 + Math.max(left, right)`.
+
+#### `diameterOfBinaryTree()`
+
+- Initialize `diameter = 0`.
+- Call `height(root)`.
+- Return `diameter`.
