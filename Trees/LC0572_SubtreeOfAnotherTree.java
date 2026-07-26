@@ -1,6 +1,6 @@
 package Trees;
 
-public class LC572_SubtreeOfAnotherTree {
+public class LC0572_SubtreeOfAnotherTree {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if(root == null){
             return false;
@@ -27,7 +27,7 @@ public class LC572_SubtreeOfAnotherTree {
         TreeNode root = TreeBuilder.fromArray("[3,4,5,1,2]");
         TreeNode subRoot = TreeBuilder.fromArray("[4,1,2]");
 
-        LC572_SubtreeOfAnotherTree obj = new LC572_SubtreeOfAnotherTree();
+        LC0572_SubtreeOfAnotherTree obj = new LC0572_SubtreeOfAnotherTree();
         boolean result = obj.isSubtree(root, subRoot);
 
         System.out.println("Is subRoot a subtree of root? " + result);

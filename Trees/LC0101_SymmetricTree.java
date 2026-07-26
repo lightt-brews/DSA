@@ -1,6 +1,6 @@
 package Trees;
 
-public class LC101_SymmetricTree {
+public class LC0101_SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
         return isMirror(root.left,root.right);
     }
@@ -21,7 +21,7 @@ public class LC101_SymmetricTree {
     public static void main(String[] args) {
         TreeNode root = TreeBuilder.fromArray("[1,2,2,3,4,4,3]");
 
-        LC101_SymmetricTree obj = new LC101_SymmetricTree();
+        LC0101_SymmetricTree obj = new LC0101_SymmetricTree();
         boolean result = obj.isSymmetric(root);
 
         System.out.println("Is the tree symmetric? " + result);

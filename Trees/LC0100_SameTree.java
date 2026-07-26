@@ -1,6 +1,6 @@
 package Trees;
 
-public class LC100_SameTree {
+public class LC0100_SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null){
             return true;
@@ -19,7 +19,7 @@ public class LC100_SameTree {
         TreeNode p = TreeBuilder.fromArray("[1,2,3]");
         TreeNode q = TreeBuilder.fromArray("[1,2,3]");
 
-        LC100_SameTree obj = new LC100_SameTree();
+        LC0100_SameTree obj = new LC0100_SameTree();
         boolean result = obj.isSameTree(p, q);
 
         System.out.println("Are the trees the same? " + result);
