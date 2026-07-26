@@ -105,3 +105,23 @@
 - Initialize `diameter = 0`.
 - Call `height(root)`.
 - Return `diameter`.
+
+
+
+### 230. Kth Smallest Element in a BST
+
+- Pattern: DFS (Inorder)
+- BST property:
+  - Inorder traversal visits nodes in **ascending order**.
+- Use class variables:
+  - `count` → keeps track of how many nodes have been visited.
+  - `ans` → stores the kth smallest value.
+- Base case:
+  - if `root == null` or `count >= k` → return `ans`.
+- Traverse left subtree.
+- Visit current node:
+  - `count++`.
+  - if `count == k`:
+    - `ans = root.val`.
+- Traverse right subtree.
+- Return `ans`.
