@@ -1,8 +1,5 @@
 # 394. Decode String
 
-## Problem
-LeetCode: https://leetcode.com/problems/decode-string/
-
 ## Problem Summary
 Given an encoded string where patterns of the form `k[encoded_string]` indicate that the enclosed substring should be repeated `k` times, decode and return the fully expanded string. The encoding may contain nested patterns, and all repeat counts are positive integers.
 
