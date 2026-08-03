@@ -1,0 +1,60 @@
+public class Lomuto2wayPartition {
+    private static final Random rand = new Random();
+
+    public int findKthLargest(int[] nums, int k) {
+        int target = nums.length - k;
+        return QuickSelect(nums, 0, nums.length-1,target);
+    }
+
+    public static int partition(int[] nums, int left, int right){
+
+        int p =left;
+        int pivotIndex = left + rand.nextInt(right - left + 1);
+        int pivot = nums[pivotIndex];
+
+        int temp = nums[pivotIndex];
+        nums[pivotIndex] = nums[right];
+        nums[right] = temp;
+
+        for(int i =left; i<right; i++){
+            if(nums[i] < pivot){
+                temp = nums[i];
+                nums[i] = nums[p];
+                nums[p] = temp;
+                p++;
+            }
+        }
+
+        temp = nums[p];
+        nums[p] = nums[right];
+        nums[right] = temp;
+
+        return p;
+    }
+
+    public static int QuickSelect(int[] nums, int left, int right, int target){
+        if (left == right){
+           return nums[left];
+        }
+
+        int pivotIndex = partition(nums, left, right);
+
+        if(target < pivotIndex){
+            return QuickSelect(nums, left, pivotIndex-1, target);
+        }
+        else if(target == pivotIndex){
+            return nums[pivotIndex];
+        }
+        else{
+            return QuickSelect(nums, pivotIndex+1, right, target);
+        }
+    }
+
+    public static void main(String[] args){
+        int[] nums = {3,2,1,5,6,4};
+        int k = 2;
+
+        Lomuto2wayPartition obj = new Lomuto2wayPartition();
+        System.out.println(obj.findKthLargest(nums,k));
+    }
+}
